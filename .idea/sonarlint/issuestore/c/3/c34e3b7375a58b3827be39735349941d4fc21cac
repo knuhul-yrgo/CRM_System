@@ -1,0 +1,11 @@
+
+u
+java:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(Æ€÷J8ÄÓøžº1
+‚
+java:S1488'"`Immediately return this expression instead of assigning it to the temporary variable "customer".(úÝ¿žþÿÿÿÿ8ÆÓøžº1
+‚
+java:S1488A"`Immediately return this expression instead of assigning it to the temporary variable "customer".(úÝ¿žþÿÿÿÿ8‹®€Ÿº1
+}
+java:S4144@"`Update this method so that its implementation is not identical to "findCustomerById" on line 38.(ÔÞ’Ú8ßòÚŸº1
+…
+java:S1157/"cReplace these toUpperCase()/toLowerCase() and equals() calls with a single equalsIgnoreCase() call.(ç­ß˜øÿÿÿÿ8óòÚŸº1

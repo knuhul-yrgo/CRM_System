@@ -3,6 +3,6 @@
 
 <beans>
 
-	<!-- add your bean definitions here! -->
+	<bean id="customerManagement" class="com.yrgo.services.customers.CustomerManagementMockImpl" />
 
 </beans>
