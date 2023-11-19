@@ -1,0 +1,14 @@
+
+o
+java:S2293!"YReplace the type specification in this constructor call with the diamond operator ("<>").(ßÙÆ 
+^
+java:S1854"CRemove this useless assignment to local variable "customerService".(Ëı‡’úÿÿÿÿ
+O
+java:S1481"4Remove this unused "customerService" local variable.(Ëı‡’úÿÿÿÿ
+I
+java:S2110"."12" is not a valid value for setting "month".(ÏÄ†Íüÿÿÿÿ
+D
+java:S2110 "."12" is not a valid value for setting "month".(ÉÒöş
+M	java:S106("9Replace this use of System.out or System.err by a logger.(ÇÙ£W
+N	java:S106+"9Replace this use of System.out or System.err by a logger.(®ñéÑ
+N	java:S106."9Replace this use of System.out or System.err by a logger.(·Š´
