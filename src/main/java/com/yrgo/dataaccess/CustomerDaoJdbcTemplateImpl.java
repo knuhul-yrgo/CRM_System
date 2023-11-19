@@ -16,6 +16,7 @@ public class CustomerDaoJdbcTemplateImpl implements CustomerDao {
     private static final String SELECT_BY_NAME_SQL = "SELECT * FROM CUSTOMER WHERE COMPANY_NAME LIKE ?";
     private static final String SELECT_ALL_SQL = "SELECT * FROM CUSTOMER";
     private static final String SELECT_FULL_DETAIL_SQL = "SELECT * FROM CUSTOMER WHERE CUSTOMER_ID=?";
+    private static final String ADD_CALL_SQL = "INSERT INTO TBL_CALL (TIME_AND_DATE, NOTES) VALUES (?,?)";
 
     private JdbcTemplate template;
 
@@ -84,16 +85,19 @@ public class CustomerDaoJdbcTemplateImpl implements CustomerDao {
 
     @Override
     public Customer getFullCustomerDetail(String customerId) throws RecordNotFoundException {
-        return template.queryForObject(
-                SELECT_FULL_DETAIL_SQL,
+        Customer customer = template.queryForObject(
+                SELECT_BY_ID_SQL,
                 new BeanPropertyRowMapper<>(Customer.class),
                 customerId);
+
+        return customer;
     }
 
     @Override
     public void addCall(Call newCall, String customerId) throws RecordNotFoundException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'addCall'");
+        template.update(
+                ADD_CALL_SQL,
+                newCall.getTimeAndDate(),
+                newCall.getNotes());
     }
-
 }

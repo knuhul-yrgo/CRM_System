@@ -3,6 +3,7 @@ package com.yrgo.services.customers;
 import java.util.List;
 
 import com.yrgo.dataaccess.CustomerDao;
+import com.yrgo.dataaccess.RecordNotFoundException;
 import com.yrgo.domain.Call;
 import com.yrgo.domain.Customer;
 
@@ -16,50 +17,62 @@ public class CustomerManagementServiceProductionImpl implements CustomerManageme
 
     @Override
     public void newCustomer(Customer newCustomer) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'newCustomer'");
+        customerDao.create(newCustomer);
     }
 
     @Override
-    public void updateCustomer(Customer changedCustomer) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'updateCustomer'");
+    public void updateCustomer(Customer changedCustomer) throws CustomerNotFoundException {
+        try {
+            customerDao.update(changedCustomer);
+        } catch (RecordNotFoundException e) {
+            throw new CustomerNotFoundException();
+        }
     }
 
     @Override
-    public void deleteCustomer(Customer oldCustomer) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'deleteCustomer'");
+    public void deleteCustomer(Customer oldCustomer) throws CustomerNotFoundException {
+        try {
+            customerDao.delete(oldCustomer);
+        } catch (RecordNotFoundException e) {
+            throw new CustomerNotFoundException();
+        }
     }
 
     @Override
     public Customer findCustomerById(String customerId) throws CustomerNotFoundException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'findCustomerById'");
+        try {
+            return customerDao.getById(customerId);
+        } catch (RecordNotFoundException e) {
+            throw new CustomerNotFoundException();
+        }
     }
 
     @Override
     public List<Customer> findCustomersByName(String name) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'findCustomersByName'");
+        return customerDao.getByName(name);
     }
 
     @Override
     public List<Customer> getAllCustomers() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getAllCustomers'");
+        return customerDao.getAllCustomers();
     }
 
     @Override
     public Customer getFullCustomerDetail(String customerId) throws CustomerNotFoundException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'getFullCustomerDetail'");
+        try {
+            return customerDao.getFullCustomerDetail(customerId);
+        } catch (RecordNotFoundException e) {
+            throw new CustomerNotFoundException();
+        }
     }
 
     @Override
     public void recordCall(String customerId, Call callDetails) throws CustomerNotFoundException {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'recordCall'");
+        try {
+            customerDao.addCall(callDetails, customerId);
+        } catch (RecordNotFoundException e) {
+            throw new CustomerNotFoundException();
+        }
     }
 
 }

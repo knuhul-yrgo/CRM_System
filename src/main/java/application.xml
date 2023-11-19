@@ -18,6 +18,13 @@
         <constructor-arg ref="dataSource" />
     </bean>
 
+    <!-- Dao beans -->
+    <bean id="customerDao" class="com.yrgo.dataaccess.CustomerDaoJdbcTemplateImpl"
+        init-method="createTables">
+        <constructor-arg ref="jdbcTemplate">
+        </constructor-arg>
+    </bean>
+
 	<bean id="customerService" class="com.yrgo.services.customers.CustomerManagementMockImpl" />
 
     <bean id="diaryService" class="com.yrgo.services.diary.DiaryManagementServiceMockImpl"/>
@@ -28,10 +35,4 @@
         <constructor-arg ref="diaryService"/>
     </bean>
 
-    <!-- Dao beans -->
-    <bean id="customerDao" class="com.yrgo.dataaccess.CustomerDaoJdbcTemplateImpl"
-          init-method="createTables">
-        <constructor-arg ref="jdbcTemplate">
-        </constructor-arg>
-    </bean>
 </beans>
