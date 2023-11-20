@@ -123,6 +123,9 @@ public class CustomerDaoJdbcTemplateImpl implements CustomerDao {
 }
 
 class CustomerRowMapper implements RowMapper<Customer> {
+
+    @Override
+    @Nullable
     public Customer mapRow(ResultSet rs, int arg1) throws SQLException {
         String customerId = rs.getString(1);
         String companyName = rs.getString(2);
@@ -140,13 +143,10 @@ class CallRowMapper implements RowMapper<Call> {
     @Override
     @Nullable
     public Call mapRow(ResultSet rs, int rowNum) throws SQLException {
-        int id = rs.getInt(1);
-        String customerId = rs.getString(2);
         Date timeAndDate = rs.getDate(3);
         String notes = rs.getString(4);
 
-        return new Call("" + id, customerId, timeAndDate, notes);
-
+        return new Call(notes, timeAndDate);
     }
 
 }
