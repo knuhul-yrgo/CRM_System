@@ -16,8 +16,6 @@ public class Call {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
 
-	private String customerId;
-
 	private Date timeAndDate;
 
 	private String notes;
@@ -31,14 +29,6 @@ public class Call {
 		// this defaults to a timestamp of "now"
 		this.timeAndDate = timestamp;
 		this.notes = notes;
-	}
-
-	public Call(String id, String customerId, Date timeAndDate, String notes) {
-		this.customerId = customerId;
-		this.timeAndDate = timeAndDate;
-		this.notes = notes;
-
-		this.id = new Integer(id);
 	}
 
 	public String toString() {
