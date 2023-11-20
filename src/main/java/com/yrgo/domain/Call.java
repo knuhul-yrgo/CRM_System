@@ -9,29 +9,39 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="TBL_CALL")
+@Table(name = "TBL_CALL")
 public class Call {
 
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
+
+	private String customerId;
 
 	private Date timeAndDate;
 
 	private String notes;
 
-	public Call(String notes){
+	public Call(String notes) {
 		// this defaults to a timestamp of "now"
-		this (notes, new java.util.Date());
+		this(notes, new java.util.Date());
 	}
 
-	public Call(String notes, Date timestamp){
+	public Call(String notes, Date timestamp) {
 		// this defaults to a timestamp of "now"
 		this.timeAndDate = timestamp;
 		this.notes = notes;
 	}
 
-	public String toString()	{
+	public Call(String id, String customerId, Date timeAndDate, String notes) {
+		this.customerId = customerId;
+		this.timeAndDate = timeAndDate;
+		this.notes = notes;
+
+		this.id = new Integer(id);
+	}
+
+	public String toString() {
 		return this.timeAndDate + " : " + this.notes;
 	}
 
@@ -51,5 +61,7 @@ public class Call {
 		this.notes = notes;
 	}
 
-	public Call() {}
+	public Call() {
+	}
+
 }
