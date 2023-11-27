@@ -2,26 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4a103d89-4ff1-47db-a15f-b41bbfe8b3e7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/CRM System.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/database.dat.properties" beforeDir="false" afterPath="$PROJECT_DIR$/database.dat.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/application.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yrgo/services/calls/CallHandlingServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yrgo/services/calls/CallHandlingServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yrgo/services/customers/CustomerManagementMockImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yrgo/services/customers/CustomerManagementMockImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yrgo/services/customers/CustomerManagementServiceProductionImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yrgo/services/customers/CustomerManagementServiceProductionImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yrgo/services/diary/DiaryManagementServiceMockImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/yrgo/services/diary/DiaryManagementServiceMockImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
   <component name="ProjectId" id="2YOujBaB5ZNdudLcT4NlwKn7cQv" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/knutb/OneDrive/Skrivbord/JAVA22/serverprog/CRM System/CRM System&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;d41d8cd98f00b204e9800998ecf8427e&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -31,6 +41,8 @@
       <option name="presentableId" value="Default" />
       <updated>1700409079868</updated>
       <workItem from="1700409080982" duration="16000" />
+      <workItem from="1701078123622" duration="30000" />
+      <workItem from="1701079504318" duration="13000" />
     </task>
     <servers />
   </component>

@@ -2,11 +2,14 @@ package com.yrgo.services.customers;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import com.yrgo.dataaccess.CustomerDao;
 import com.yrgo.dataaccess.RecordNotFoundException;
 import com.yrgo.domain.Call;
 import com.yrgo.domain.Customer;
 
+@Transactional
 public class CustomerManagementServiceProductionImpl implements CustomerManagementService {
 
     CustomerDao customerDao;

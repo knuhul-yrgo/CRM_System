@@ -2,12 +2,15 @@ package com.yrgo.services.calls;
 
 import java.util.Collection;
 
+import javax.transaction.Transactional;
+
 import com.yrgo.domain.Action;
 import com.yrgo.domain.Call;
 import com.yrgo.services.customers.CustomerManagementService;
 import com.yrgo.services.customers.CustomerNotFoundException;
 import com.yrgo.services.diary.DiaryManagementService;
 
+@Transactional
 public class CallHandlingServiceImpl implements CallHandlingService {
 
     private CustomerManagementService customerManagementService;

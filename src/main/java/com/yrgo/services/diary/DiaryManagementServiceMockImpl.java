@@ -5,8 +5,11 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import javax.transaction.Transactional;
+
 import com.yrgo.domain.Action;
 
+@Transactional
 public class DiaryManagementServiceMockImpl implements DiaryManagementService {
 
 	private Set<Action> allActions = new HashSet<Action>();
