@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4a103d89-4ff1-47db-a15f-b41bbfe8b3e7" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/CRM System.iml" beforeDir="false" />
-    </list>
+    <list default="true" id="4a103d89-4ff1-47db-a15f-b41bbfe8b3e7" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="ProjectId" id="2YOujBaB5ZNdudLcT4NlwKn7cQv" />
   <component name="ProjectViewState">
@@ -19,6 +20,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/knutb/OneDrive/Skrivbord/JAVA22/serverprog/CRM System/CRM System",
+    "spring.configuration.checksum": "d41d8cd98f00b204e9800998ecf8427e",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -31,6 +34,7 @@
       <option name="presentableId" value="Default" />
       <updated>1700409079868</updated>
       <workItem from="1700409080982" duration="16000" />
+      <workItem from="1701078123622" duration="30000" />
     </task>
     <servers />
   </component>
