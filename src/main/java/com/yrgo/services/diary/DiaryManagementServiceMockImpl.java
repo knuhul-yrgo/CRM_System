@@ -7,9 +7,12 @@ import java.util.Set;
 
 import javax.transaction.Transactional;
 
+import org.springframework.stereotype.Service;
+
 import com.yrgo.domain.Action;
 
 @Transactional
+@Service("diaryService")
 public class DiaryManagementServiceMockImpl implements DiaryManagementService {
 
 	private Set<Action> allActions = new HashSet<Action>();

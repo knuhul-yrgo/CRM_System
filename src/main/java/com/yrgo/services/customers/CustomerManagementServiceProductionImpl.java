@@ -4,19 +4,21 @@ import java.util.List;
 
 import javax.transaction.Transactional;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
+
 import com.yrgo.dataaccess.CustomerDao;
 import com.yrgo.dataaccess.RecordNotFoundException;
 import com.yrgo.domain.Call;
 import com.yrgo.domain.Customer;
 
 @Transactional
+@Service("customerService")
 public class CustomerManagementServiceProductionImpl implements CustomerManagementService {
 
+    @Autowired
     CustomerDao customerDao;
-
-    CustomerManagementServiceProductionImpl(CustomerDao customerDao) {
-        this.customerDao = customerDao;
-    }
 
     @Override
     public void newCustomer(Customer newCustomer) {
