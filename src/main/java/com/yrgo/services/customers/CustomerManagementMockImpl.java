@@ -9,6 +9,7 @@ import javax.transaction.Transactional;
 import com.yrgo.domain.Call;
 import com.yrgo.domain.Customer;
 
+@Deprecated
 public class CustomerManagementMockImpl implements CustomerManagementService {
 	private HashMap<String, Customer> customerMap;
 
