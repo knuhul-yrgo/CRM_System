@@ -15,7 +15,7 @@ import com.yrgo.domain.Customer;
 public class CustomerDaoJdbcTemplateImpl implements CustomerDao {
     private static final String DELETE_SQL = "DELETE FROM CUSTOMER WHERE CUSTOMER_ID=?";
     private static final String UPDATE_SQL = "UPDATE CUSTOMER SET COMPANY_NAME=?, EMAIL=?, TELEPHONE=?, NOTES=? WHERE CUSTOMER_ID=?";
-    private static final String INSERT_SQL = "INSERT INTO ACTION (COMPANY_NAME, EMAIL, TELEPHONE, NOTES) VALUES (?,?,?,?)";
+    private static final String INSERT_SQL = "INSERT INTO CUSTOMER (COMPANY_NAME, EMAIL, TELEPHONE, NOTES) VALUES (?,?,?,?)";
     private static final String SELECT_BY_ID_SQL = "SELECT * FROM CUSTOMER WHERE CUSTOMER_ID=?";
     private static final String SELECT_BY_NAME_SQL = "SELECT * FROM CUSTOMER WHERE COMPANY_NAME LIKE ?";
     private static final String SELECT_ALL_SQL = "SELECT * FROM CUSTOMER";
