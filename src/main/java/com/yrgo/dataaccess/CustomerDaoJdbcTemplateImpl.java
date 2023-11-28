@@ -16,7 +16,6 @@ import org.springframework.stereotype.Repository;
 import com.yrgo.domain.Call;
 import com.yrgo.domain.Customer;
 
-@Repository
 public class CustomerDaoJdbcTemplateImpl implements CustomerDao {
     private static final String DELETE_SQL = "DELETE FROM CUSTOMER WHERE CUSTOMER_ID=?";
     private static final String UPDATE_SQL = "UPDATE CUSTOMER SET COMPANY_NAME=?, EMAIL=?, TELEPHONE=?, NOTES=? WHERE CUSTOMER_ID=?";
