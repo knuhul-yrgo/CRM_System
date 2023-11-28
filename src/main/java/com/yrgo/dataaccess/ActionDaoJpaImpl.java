@@ -19,18 +19,21 @@ public class ActionDaoJpaImpl implements ActionDao {
 
     @Override
     public void create(Action newAction) {
+        System.out.println("using jpa");
         em.persist(newAction);
     }
 
     public List<Action> getIncompleteActions(String userId) {
         return em
-                .createQuery("SELECT a FROM Action a WHERE a.owningUser = :userId AND a.complete = false", Action.class)
+                .createQuery(
+                        "SELECT action FROM Action AS a WHERE action.owning_user = :userId AND action.complete = false",
+                        Action.class)
                 .setParameter("userId", userId)
                 .getResultList();
     }
 
     public void update(Action actionToUpdate) throws RecordNotFoundException {
-        if (em.find(Action.class, actionToUpdate) != null) {
+        if (em.find(Action.class, actionToUpdate.getActionId()) != null) {
             em.merge(actionToUpdate);
         } else {
             throw new RecordNotFoundException();
