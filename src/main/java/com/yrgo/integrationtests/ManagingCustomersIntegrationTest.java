@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import javax.transaction.Transactional;
 
@@ -13,6 +15,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import com.yrgo.domain.Customer;
 import com.yrgo.services.customers.CustomerManagementService;
+import com.yrgo.services.customers.CustomerNotFoundException;
 
 @ExtendWith(SpringExtension.class)
 @ContextConfiguration({ "/other-tiers.xml", "/datasource-test.xml" })
@@ -35,6 +38,24 @@ public class ManagingCustomersIntegrationTest {
         // assert
         int customersInDb = customers.getAllCustomers().size();
         assertEquals(2, customersInDb, "There should be two customers in the database!");
+    }
+
+    @Test
+    public void testFindingCustomerByIsbn() {
+
+        // arrange
+        String customerId = "12345";
+        Customer testCustomer = new Customer(customerId, "McDonalds", "Evil company");
+        customers.newCustomer(testCustomer);
+ 
+        //act
+        Customer foundCustomer = null;
+        try {
+            foundCustomer= customers.findCustomerById(customerId);
+            assertEquals( testCustomer, foundCustomer);
+        } catch (CustomerNotFoundException e) {
+            fail("No customer was found");
+        }
     }
 
 }
